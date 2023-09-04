@@ -1,0 +1,539 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scrollbar-width: none;
+}
+/* Header styles */
+
+.header {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-family: sans-serif;
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: whitesmoke;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #0a1726;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nav-links a:hover {
+    background-color: #00162f70;
+    color: black;
+}
+
+.centered-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #fff;
+}
+/* Hero Section styles */
+
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+/* Video Background Styles */
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Hero Content styles */
+
+.hero-content {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    padding: 50px 50px;
+    z-index: 1;
+    /* Ensure the content appears above the image */
+}
+
+.hero-content:before {
+    border-radius: 12px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: -1;
+    /* Move the overlay below the content */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #4917ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
+/* Features Section styles */
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+.feature {
+    text-align: center;
+    max-width: 300px;
+    color: white;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.car-photos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    padding: 20px;
+    /* Add padding to create spacing between the photos */
+}
+
+.car-photo-container {
+    width: 30%;
+    background-color: red;
+    /* Adjust the width of each car photo container */
+}
+
+.car-photo img {
+    width: 400px;
+    object-fit: cover;
+    display: block;
+    animation-name: upDownAnimation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 6px;
+    /* Apply the animation */
+}
+
+@keyframes upDownAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#img1 {
+    width: 440px;
+}
+/* Footer styles, same as before */
+/* Footer styles */
+
+.footer {
+    background-color: #484747;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+/* Search Bar styles */
+
+.search {
+    background-color: #f7f7f7;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.search-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-btn {
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: #0d0df5;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+/* Cars Listing Section styles */
+
+.cars-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.car {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 1rem;
+}
+
+.car-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.car-info ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.car-info ul li {
+    margin-bottom: 0.5rem;
+}
+/* Common styles for buttons */
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #000229;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #00022953;
+    color: rgb(0, 0, 0);
+}
+/* Search Bar styles */
+
+.search {
+    background-color: #f7f7f7;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.search-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-btn {
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: #ff8c00;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+/* Cars Listing Section styles */
+
+.cars-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.car {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 1rem;
+}
+
+.car-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.car-info ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.car-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+/* About Section styles */
+
+.about-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("img/ing.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-content {
+    max-width: 57%;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    background-color: #00000059;
+    padding-left: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+/* Contact Section styles */
+
+.contact-section {
+    padding: 2rem;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content p {
+    margin-bottom: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+/* About Section styles */
+
+about-section {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.about-bg {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(65, 64, 64, 0.5)), url('car-about.jpg') center/cover no-repeat;
+    padding: 2rem;
+}
+
+.about-img {
+    width: 600px;
+    height: 640px;
+    text-align: right;
+    float: left;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+/* Contact Section styles */
+
+.contact-section {
+    background-image: url(img/grey.jpg);
+    background-color: #f7f7f7;
+    height: 64vh;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content p {
+    margin-bottom: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+/* Generic Home Button styles */
+/* Generic Home Button styles */
+
+.home-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ff8c00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: fixed;
+    top: 40px;
+    right: 10px;
+}
+
+.home-button:hover {
+    background-color: #ff6347;
+}

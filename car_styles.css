@@ -1,0 +1,125 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set up the global styles */
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.header {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+.logo {
+    font-family: sans-serif;
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: whitesmoke;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #0a1726;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nav-links a:hover {
+    background-color: #00162f70;
+}
+
+.centered-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #fff;
+}
+
+
+/* Header styles, if needed */
+
+
+/* Car Sections styles */
+
+.car-section {
+    padding: 2rem;
+    background-image: url(img/grey.jpg);
+}
+
+.car-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.car-item {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.car-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-item h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.car-item p {
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
